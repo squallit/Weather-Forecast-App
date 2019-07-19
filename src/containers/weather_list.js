@@ -8,6 +8,7 @@ class WeatherList extends Component {
   renderWeather(cityData) {
     const cityName = cityData.city.name;
     const temperatures = cityData.list.map(weather => weather.main.temp);
+    const fahTemperatures = temperatures.map(temperature => 1.8*(temperature - 273) + 32);
     const pressures = cityData.list.map(weather => weather.main.pressure);
     const humidities = cityData.list.map(weather => weather.main.humidity);
     const {lon,lat} = cityData.city.coord; //ES6
@@ -20,7 +21,7 @@ class WeatherList extends Component {
           <GoogleMap lon={lon} lat={lat} />
         </td>
         <td>
-          <Chart data={temperatures} color="red" unit="K"/>
+          <Chart data={fahTemperatures} color="red" unit="F"/>
         </td>
         <td>
           <Chart data={pressures} color="green" unit="hPA"/>
@@ -38,7 +39,7 @@ class WeatherList extends Component {
         <thead>
           <tr>
             <th>City</th>
-            <th>Temperature (K)</th>
+            <th>Temperature (F)</th>
             <th>Pressure (hPA)</th>
             <th>Humidity (%)</th>
           </tr>
