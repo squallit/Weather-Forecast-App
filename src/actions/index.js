@@ -7,6 +7,7 @@ const ROOT_URL = 'https://api.openweathermap.org/data/2.5/forecast?appid=' + API
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(city) {
+  //`` & $ - Template literals is for string interpolation & multiple line string in javaScript
   const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
