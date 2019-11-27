@@ -1,8 +1,9 @@
 # Description
 
 • A weather forecast app to retrieve and display data from multiple cities around the world
-• Implemented ReactJS for interaction with OpenWeatherMap API to retrieve and display temperature, atmospheric
-pressure, and humidity from searched cities around the world with state management using Redux
+
+• Implemented ReactJS for interaction with OpenWeatherMap API to retrieve and display temperature, atmospheric pressure, and humidity from searched cities around the world with state management using Redux
+
 • Utilized: JavaScript, ReactJS, Redux, Weather API from OpenWeatherMap
 
 # How To Run:
